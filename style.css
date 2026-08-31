@@ -501,19 +501,307 @@ footer {
    MOBILE
 ========================================= */
 
-@media (max-width: 520px) {
+/* =========================================
+   MOBILE / CELULAR
+========================================= */
 
-  .page {
-    padding: 18px;
+@media (max-width: 600px) {
+
+  html,
+  body {
+    width: 100%;
+    min-height: 100%;
   }
 
+  body {
+    overflow-x: hidden;
+  }
+
+  .page {
+    min-height: 100vh;
+    min-height: 100dvh;
+
+    padding: 16px;
+
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  /* ================================
+     CARD
+  ================================ */
+
   .card {
-    padding: 38px 24px 25px;
+    width: 100%;
+    max-width: 430px;
+
+    padding: 32px 22px 24px;
 
     border-radius: 22px;
+
+    box-shadow:
+      0 18px 45px
+      rgba(29, 59, 43, 0.12);
+  }
+
+
+  /* ================================
+     LOGO
+  ================================ */
+
+  .logo {
+    width: 52px;
+    height: 52px;
+
+    margin-bottom: 20px;
+
+    font-size: 24px;
+  }
+
+
+  /* ================================
+     TÍTULOS
+  ================================ */
+
+  .eyebrow {
+    font-size: 10px;
+
+    letter-spacing: 1.7px;
+
+    margin-bottom: 9px;
   }
 
   h1 {
-    font-size: 32px;
+    font-size: clamp(28px, 8vw, 34px);
+
+    line-height: 1.12;
+
+    padding: 0 5px;
+  }
+
+  .description {
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    margin-top: 13px;
+    margin-bottom: 26px;
+
+    padding: 0 8px;
+  }
+
+
+  /* ================================
+     CAPTCHA
+  ================================ */
+
+  .captcha-box {
+    padding: 18px 15px;
+
+    border-radius: 14px;
+  }
+
+  .captcha-label {
+    font-size: 10px;
+
+    letter-spacing: 1.2px;
+
+    margin-bottom: 12px;
+  }
+
+  .captcha-question {
+    font-size: 21px;
+
+    margin-bottom: 15px;
+  }
+
+
+  /* ================================
+     INPUTS
+  ================================ */
+
+  label {
+    font-size: 12px;
+
+    margin-bottom: 7px;
+  }
+
+  input {
+    height: 52px;
+
+    border-radius: 11px;
+
+    padding: 0 15px;
+
+    font-size: 15px;
+  }
+
+
+  /* ================================
+     BOTÕES
+  ================================ */
+
+  .primary-button {
+    height: 52px;
+
+    border-radius: 11px;
+
+    margin-top: 12px;
+
+    font-size: 13px;
+  }
+
+
+  /* ================================
+     DOWNLOAD
+  ================================ */
+
+  .divider {
+    margin: 24px 0;
+  }
+
+  .success-large {
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 15px;
+
+    font-size: 28px;
+  }
+
+  .download-title {
+    font-size: 18px;
+  }
+
+  .download-description {
+    font-size: 12.5px;
+
+    line-height: 1.55;
+
+    padding: 0 8px;
+
+    margin-bottom: 18px;
+  }
+
+  .secondary-button {
+    height: 46px;
+
+    font-size: 12px;
+  }
+
+
+  /* ================================
+     FOOTER
+  ================================ */
+
+  footer {
+    margin-top: 25px;
+
+    gap: 7px;
+
+    font-size: 9px;
+  }
+
+
+  /* ================================
+     DECORAÇÃO
+  ================================ */
+
+  .background-leaf {
+    width: 280px;
+    height: 280px;
+  }
+
+  .leaf-one {
+    top: -120px;
+    left: -130px;
+  }
+
+  .leaf-two {
+    right: -130px;
+    bottom: -130px;
+  }
+}
+
+
+/* =========================================
+   CELULARES MUITO PEQUENOS
+========================================= */
+
+@media (max-width: 360px) {
+
+  .page {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 27px 17px 20px;
+
+    border-radius: 19px;
+  }
+
+  .logo {
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 17px;
+  }
+
+  h1 {
+    font-size: 27px;
+  }
+
+  .description {
+    font-size: 13px;
+
+    margin-bottom: 21px;
+  }
+
+  .captcha-box {
+    padding: 16px 12px;
+  }
+
+  input,
+  .primary-button {
+    height: 50px;
+  }
+
+  footer {
+    margin-top: 20px;
+  }
+}
+
+
+/* =========================================
+   TELAS COM POUCA ALTURA
+========================================= */
+
+@media (max-height: 700px) and (max-width: 600px) {
+
+  .page {
+    align-items: flex-start;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .card {
+    padding-top: 25px;
+  }
+
+  .logo {
+    width: 46px;
+    height: 46px;
+
+    margin-bottom: 15px;
+  }
+
+  .description {
+    margin-bottom: 20px;
+  }
+
+  footer {
+    margin-top: 20px;
   }
 }
