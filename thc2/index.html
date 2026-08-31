@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Acesso Seguro</title>
+
+  <meta
+    name="description"
+    content="Acesse seu documento de forma segura."
+  >
+
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+<body>
+
+  <main class="page">
+
+    <!-- Elementos decorativos -->
+
+    <div class="background-leaf leaf-one"></div>
+    <div class="background-leaf leaf-two"></div>
+
+    <section class="card">
+
+      <!-- Logo -->
+
+      <div class="logo">
+        <span>✦</span>
+      </div>
+
+      <p class="eyebrow">
+        ACESSO SEGURO
+      </p>
+
+      <h1>
+        Acesse seu documento
+      </h1>
+
+      <p class="description">
+        Complete a verificação para
+        continuar.
+      </p>
+
+
+      <!-- =========================================
+           CAPTCHA
+      ========================================== -->
+
+      <div
+        id="captchaSection"
+        class="captcha-section"
+      >
+
+        <div class="captcha-box">
+
+          <p class="captcha-label">
+            Verificação de segurança
+          </p>
+
+          <p
+            id="captchaQuestion"
+            class="captcha-question"
+          >
+            Carregando...
+          </p>
+
+          <input
+            id="captchaInput"
+            type="number"
+            placeholder="Sua resposta"
+            autocomplete="off"
+          >
+
+          <button
+            id="captchaButton"
+            class="primary-button"
+          >
+            Continuar
+          </button>
+
+          <p
+            id="captchaError"
+            class="captcha-error"
+          ></p>
+
+        </div>
+
+      </div>
+
+
+      <!-- =========================================
+           CÓDIGO
+      ========================================== -->
+
+      <div
+        id="codeSection"
+        class="hidden"
+      >
+
+        <form id="codeForm">
+
+          <label for="code">
+            Código de acesso
+          </label>
+
+          <div class="input-wrapper">
+
+            <input
+              id="code"
+              type="text"
+              placeholder="Digite seu código"
+              autocomplete="off"
+              required
+            >
+
+          </div>
+
+          <button
+            id="validateButton"
+            class="primary-button"
+            type="submit"
+          >
+            Validar código
+          </button>
+
+        </form>
+
+        <div
+          id="codeMessage"
+          class="message"
+        ></div>
+
+      </div>
+
+
+      <!-- =========================================
+           DOWNLOAD
+      ========================================== -->
+
+      <div
+        id="downloadSection"
+        class="download-section hidden"
+      >
+
+        <div class="divider"></div>
+
+        <div class="success-large">
+          ✓
+        </div>
+
+        <p class="download-title">
+          Documento disponível
+        </p>
+
+        <p class="download-description">
+          Seu código foi validado.
+          Clique abaixo para baixar
+          seu documento.
+        </p>
+
+        <a
+          id="downloadButton"
+          class="primary-button download-button"
+          href="#"
+          download
+        >
+          ↓ &nbsp; Baixar documento
+        </a>
+
+        <button
+          id="resetButton"
+          class="secondary-button"
+        >
+          Validar outro código
+        </button>
+
+      </div>
+
+
+      <!-- Footer -->
+
+      <footer>
+
+        <span>Natural</span>
+        <span>•</span>
+        <span>Seguro</span>
+        <span>•</span>
+        <span>Confidencial</span>
+
+      </footer>
+
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>

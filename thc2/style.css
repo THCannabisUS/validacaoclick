@@ -1,0 +1,519 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --green-dark: #173b2b;
+  --green: #3d7658;
+  --green-light: #dfece1;
+  --cream: #f6f3eb;
+  --white: #ffffff;
+  --text: #25362c;
+  --muted: #748078;
+  --border: #dce3dc;
+  --success: #2e7650;
+  --error: #a04c4c;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background: var(--cream);
+  color: var(--text);
+}
+
+
+/* =========================================
+   PÁGINA
+========================================= */
+
+.page {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 30px 20px;
+
+  position: relative;
+  overflow: hidden;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.card {
+  width: 100%;
+  max-width: 470px;
+
+  background: rgba(255, 255, 255, 0.97);
+
+  padding: 48px 46px 30px;
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 25px 70px
+    rgba(29, 59, 43, 0.12);
+
+  position: relative;
+  z-index: 2;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.logo {
+  width: 58px;
+  height: 58px;
+
+  margin: 0 auto 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: var(--green-dark);
+
+  color: white;
+
+  font-size: 27px;
+}
+
+
+/* =========================================
+   TEXTOS
+========================================= */
+
+.eyebrow {
+  text-align: center;
+
+  color: var(--green);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 10px;
+}
+
+h1 {
+  text-align: center;
+
+  font-family: Georgia, serif;
+
+  font-size: 38px;
+  line-height: 1.15;
+
+  color: var(--green-dark);
+
+  font-weight: 500;
+}
+
+.description {
+  text-align: center;
+
+  color: var(--muted);
+
+  font-size: 15px;
+  line-height: 1.6;
+
+  margin: 15px auto 32px;
+
+  max-width: 330px;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  color: var(--text);
+}
+
+input {
+  width: 100%;
+  height: 54px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 12px;
+
+  padding: 0 17px;
+
+  background: #fafcf9;
+
+  color: var(--text);
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.2s;
+}
+
+input:focus {
+  border-color: var(--green);
+
+  box-shadow:
+    0 0 0 4px
+    rgba(61, 118, 88, 0.08);
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+
+/* =========================================
+   BOTÕES
+========================================= */
+
+.primary-button {
+  width: 100%;
+  height: 54px;
+
+  border: 0;
+  border-radius: 12px;
+
+  margin-top: 14px;
+
+  background: var(--green-dark);
+
+  color: white;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+}
+
+.primary-button:hover {
+  background: #24543d;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   CAPTCHA
+========================================= */
+
+.captcha-section {
+  animation: fadeIn 0.35s ease;
+}
+
+.captcha-box {
+  padding: 22px;
+
+  border-radius: 16px;
+
+  background: #f4f8f4;
+
+  border: 1px solid #dce7dd;
+
+  text-align: center;
+}
+
+.captcha-label {
+  color: var(--green);
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1.4px;
+
+  margin-bottom: 14px;
+}
+
+.captcha-question {
+  color: var(--green-dark);
+
+  font-family: Georgia, serif;
+
+  font-size: 23px;
+
+  margin-bottom: 18px;
+}
+
+.captcha-question strong {
+  color: var(--green);
+}
+
+.captcha-box input {
+  background: white;
+
+  text-align: center;
+}
+
+.captcha-error {
+  color: var(--error);
+
+  font-size: 12px;
+
+  margin-top: 10px;
+
+  min-height: 16px;
+}
+
+
+/* =========================================
+   MENSAGENS
+========================================= */
+
+.message {
+  margin-top: 16px;
+
+  padding: 13px 15px;
+
+  border-radius: 11px;
+
+  font-size: 13px;
+
+  text-align: center;
+}
+
+.message.success {
+  color: var(--success);
+
+  background: #edf6ef;
+}
+
+.message.error {
+  color: var(--error);
+
+  background: #faf0f0;
+}
+
+
+/* =========================================
+   DOWNLOAD
+========================================= */
+
+.download-section {
+  text-align: center;
+
+  animation: fadeIn 0.4s ease;
+}
+
+.divider {
+  height: 1px;
+
+  background: var(--border);
+
+  margin: 28px 0;
+}
+
+.success-large {
+  width: 64px;
+  height: 64px;
+
+  margin: 0 auto 17px;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e4f1e7;
+
+  color: var(--success);
+
+  font-size: 32px;
+
+  font-weight: 700;
+}
+
+.download-title {
+  color: var(--green-dark);
+
+  font-size: 19px;
+
+  font-weight: 700;
+
+  margin-bottom: 7px;
+}
+
+.download-description {
+  color: var(--muted);
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  max-width: 300px;
+
+  margin: 0 auto 20px;
+}
+
+.download-button {
+  margin-top: 0;
+}
+
+.secondary-button {
+  width: 100%;
+  height: 48px;
+
+  margin-top: 10px;
+
+  border: 1px solid var(--border);
+
+  border-radius: 12px;
+
+  background: white;
+
+  color: var(--green-dark);
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.secondary-button:hover {
+  background: #f5f8f5;
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+footer {
+  margin-top: 32px;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 9px;
+
+  color: #9aa49d;
+
+  font-size: 10px;
+
+  letter-spacing: 0.4px;
+}
+
+
+/* =========================================
+   ELEMENTOS DECORATIVOS
+========================================= */
+
+.background-leaf {
+  position: absolute;
+
+  width: 380px;
+  height: 380px;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      rgba(61, 118, 88, 0.09),
+      transparent 65%
+    );
+
+  border-radius: 50%;
+}
+
+.leaf-one {
+  top: -150px;
+  left: -120px;
+}
+
+.leaf-two {
+  bottom: -170px;
+  right: -100px;
+}
+
+
+/* =========================================
+   UTILIDADES
+========================================= */
+
+.hidden {
+  display: none !important;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 520px) {
+
+  .page {
+    padding: 18px;
+  }
+
+  .card {
+    padding: 38px 24px 25px;
+
+    border-radius: 22px;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+}
